@@ -10,7 +10,11 @@
     <div class="container">
 
       <div class="post-image-container">
-        <img id="post-image" class="img-fluid" src="{{ site.s3Bucket }}{{ page.hiQualPath }}">
+        <img
+          id="post-image"
+          class="img-fluid"
+          src="{{ site.s3 }}{{ page.hiQualPath }}"
+        >
       </div>
 
       <div class="text-center">
@@ -24,7 +28,7 @@
       <div class="text-center text-muted">
         <p class="card-text text-muted">
           Posted on
-          {% assign day = page.date | date: "%-d"  %}
+          {% assign day = page.date | date: "%-d" %}
           {% case day %}
           {% when '1' or '21' or '31' %}{{ day }}st
           {% when '2' or '22' %}{{ day }}nd
@@ -39,38 +43,6 @@
   </div>
 
   {% include footer.html %}
-  <!-- Unused because it's a bit terrible -->
-  <!-- <script>
-    function setImageSize(img) {
-      aspectRatio = img.prop('naturalWidth') / img.prop('naturalHeight')
-
-      height = $(window).height() - 250 - 30 - 30
-      projectedWidth = height * aspectRatio
-
-      width = $(window).width() - 45 - 45
-      projectedHeight = width * aspectRatio
-
-      // If our projected width is too wide, set it to the smaller width
-      if (projectedWidth >= $(window).width()) {
-        img.width(width)
-        img.height('auto')
-        console.log('set width to', width, 'and height to auto')
-      }
-
-      if (projectedHeight > height) {
-        img.height(height)
-        img.width('auto')
-        console.log('set height to', height, 'and width to auto')
-      }
-    }
-
-    // Be __really__ sure the image has loaded
-    $(window).on('load', () => {
-      var img = $('#post-image')
-      img.onload = setImageSize(img)
-    });
-
-  </script> -->
 </body>
 
 </html>

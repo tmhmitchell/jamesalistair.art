@@ -1,18 +1,24 @@
 <div class="post">
   <div class="card rounded-0">
     <a href="{{ post.url }}">
-      <img class="card-img-top rounded-0" src="{{ site.s3Bucket }}{{ post.loQualPath }}">
+      <img
+        class="card-img-top rounded-0"
+        src="{{ site.s3 }}{{ post.loQualPath }}"
+      >
     </a>
     <div class="card-body">
       <h5 class="card-title">
-        <a href="{{ post.url }}" class="post-title">
+        <a
+          href="{{ post.url }}"
+          class="post-title"
+        >
           {{ post.title }}
         </a>
       </h5>
       <h6 class="card-subtitle mb-2 text-muted">{{ post.description }}</h6>
       <p class="card-text text-muted">
         <i class="far fa-clock"></i>
-        {% assign day = post.date | date: "%-d"  %}
+        {% assign day = post.date | date: "%-d" %}
         {% case day %}
         {% when '1' or '21' or '31' %}{{ day }}st
         {% when '2' or '22' %}{{ day }}nd

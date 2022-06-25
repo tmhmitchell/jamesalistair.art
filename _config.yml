@@ -5,6 +5,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
+  - tools
 
 s3: https://cdn.snorv.art
 
