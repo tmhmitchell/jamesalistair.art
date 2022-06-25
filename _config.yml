@@ -1,0 +1,13 @@
+permalink: /:categories/:year/:month/:title
+
+exclude:
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+
+s3: https://cdn.snorv.art
+
+sass:
+  sass_dir: _sass
+  style: compressed
