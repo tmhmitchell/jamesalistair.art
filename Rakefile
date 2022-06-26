@@ -14,5 +14,5 @@ task :img do
 end
 
 task :serve do
-    sh "bundle exec jekyll serve --livereload --trace"
+    sh "bundle exec jekyll serve --livereload --trace --host 0.0.0.0"
 end

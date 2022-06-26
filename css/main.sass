@@ -6,12 +6,6 @@ $link-hover-color: #77c571
 body
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif
 
-a
-    text-decoration: none
-
-    & :hover
-        color: $link-hover-color
-
 .masthead
     background-color: #702942
     width: 100%
@@ -24,26 +18,39 @@ a
     color: #ffffff
 
     .masthead-links
-        p
+        a
+            color: #ffffff
+            text-decoration: none
+
             display: inline-block
             margin-right: 1em
             margin-bottom: 2em
 
-        p :visited
-            color: inherit
-
-        p :hover
+        a :hover
             color: $link-hover-color
+
+        // a
+            // color: inherit
+            // text-decoration: none
 
 .masthead-title
     letter-spacing: 0.25em
 
 div[class*="container"]
-    padding: 2em
+    margin: 2em
+
+    // padding-left: 0em
+    // padding-right: 0em
+    // padding-top: 2em
+    padding-bottom: 2em
 
 div[class*="col-"]
     padding-left: 1em
     padding-right: 1em
+
+div[class*="row"]
+    --bs-gutter-x: 2em
+    // padding-right: 1em
 
 .post
     margin-bottom: 2em
@@ -55,9 +62,9 @@ div[class*="col-"]
     &-title:hover:visited
         color: $link-hover-color
 
-// 17em is derived from the padding/margin/text elements in the header
+// 15em is derived from the padding/margin/text elements in the header
 // I guessed until it looked right
 .img-magic
-    max-height: calc(100vh - 17em)
+    max-height: calc(100vh - 15em)
     max-width: 100%
     padding-bottom: 2em
