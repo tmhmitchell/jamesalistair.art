@@ -6,6 +6,8 @@ exclude:
   - Gemfile.lock
   - README.md
   - tools
+  - go.mod
+  - go.lock
 
 s3: https://cdn.snorv.art
 shopify: https://shop.jamesalistair.art

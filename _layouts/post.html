@@ -12,7 +12,13 @@
       <div class="col-lg-6 text-center">
         <img
           id="post-image"
-          src="{{ site.s3 }}{{ page.hiQualPath }}"
+          src="
+          {% if page.hiQualPath contains 'https://' %}
+          {{ page.hiQualPath }}
+          {% else %}
+          {{ site.s3 }}{{ page.hiQualPath }}
+          {% endif %}
+          "
           class="img-magic float-lg-end"
         >
       </div>

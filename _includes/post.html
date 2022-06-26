@@ -3,7 +3,13 @@
     <a href="{{ post.url }}">
       <img
         class="card-img-top rounded-0"
-        src="{{ site.s3 }}{{ post.loQualPath }}"
+        src="
+        {% if post.loQualPath contains 'https://' %}
+        {{ post.loQualPath }}
+        {% else %}
+        {{ site.s3 }}{{ post.loQualPath }}
+        {% endif %}
+        "
       >
     </a>
     <div class="card-body">
