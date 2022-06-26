@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"io"
 	"net/http"
 	"os"
 	"strings"
@@ -128,6 +129,9 @@ func main() {
 	}
 	defer res.Body.Close()
 
+	io.Copy(os.Stdout, res.Body)
+	fmt.Println()
+
 	payload := Payload{}
 	err = json.NewDecoder(res.Body).Decode(&payload)
 	if err != nil {
@@ -135,6 +139,9 @@ func main() {
 	}
 
 	for _, product := range payload.Products {
+		fmt.Println(product)
+		fmt.Println(product.Variants[0].InventoryQuantity)
+
 		fmt.Printf(
 			"%s-%s.md\n",
 			product.CreatedAt.Format("2006-01-02"),

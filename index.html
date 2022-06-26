@@ -8,20 +8,21 @@ title: "Home"
   {% assign mod = forloop.index0 | modulo: 4 %}
   {% if mod == 0 %}
   <div class="row">
-    <div class="col-sm-3">
+    <div class="col-md-3">
       {% include post.html content=post %}
     </div>
     {% elsif mod == 3 %}
-    <div class="col-sm-3">
+    <div class="col-md-3">
       {% include post.html content=post %}
     </div>
   </div>
   {% else %}
-  <div class="col-sm-3">
+  <div class="col-md-3">
     {% include post.html content=post %}
   </div>
   {% endif %}
   {% endfor %}
   {% comment %} Close row if it's not already been closed {% endcomment %}
-  {% if mod != 3 %}</div>{% endif %}
+  {% if mod != 3 %}
+</div>{% endif %}
 </div>

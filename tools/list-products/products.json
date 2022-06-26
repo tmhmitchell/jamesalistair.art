@@ -1,0 +1,89 @@
+{
+  "products": [
+    {
+      "id": 7718173311219,
+      "title": "Partially Drunk Can of Suntory Stong Zero Double Lemon",
+      "body_html": "Pretty tasty\u003cbr\u003e",
+      "vendor": "james-alistair-art",
+      "product_type": "",
+      "created_at": "2022-06-25T15:48:01+01:00",
+      "handle": "mostly-empty-can-of-suntory-stong-zero-double-lemon",
+      "updated_at": "2022-06-25T22:48:51+01:00",
+      "published_at": "2022-06-25T15:48:02+01:00",
+      "template_suffix": "",
+      "status": "active",
+      "published_scope": "web",
+      "tags": "",
+      "admin_graphql_api_id": "gid:\/\/shopify\/Product\/7718173311219",
+      "variants": [
+        {
+          "product_id": 7718173311219,
+          "id": 42908778397939,
+          "title": "Default Title",
+          "price": "1.00",
+          "sku": "",
+          "position": 1,
+          "inventory_policy": "deny",
+          "compare_at_price": null,
+          "fulfillment_service": "manual",
+          "inventory_management": "shopify",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "created_at": "2022-06-25T15:48:01+01:00",
+          "updated_at": "2022-06-25T22:48:51+01:00",
+          "taxable": true,
+          "barcode": "",
+          "grams": 0,
+          "image_id": null,
+          "weight": 0.0,
+          "weight_unit": "lb",
+          "inventory_item_id": 45004171149555,
+          "inventory_quantity": 1,
+          "old_inventory_quantity": 1,
+          "requires_shipping": true,
+          "admin_graphql_api_id": "gid:\/\/shopify\/ProductVariant\/42908778397939"
+        }
+      ],
+      "options": [
+        {
+          "product_id": 7718173311219,
+          "id": 9863808778483,
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ],
+      "images": [
+        {
+          "product_id": 7718173311219,
+          "id": 37632686358771,
+          "position": 1,
+          "created_at": "2022-06-25T15:48:29+01:00",
+          "updated_at": "2022-06-25T15:48:29+01:00",
+          "alt": null,
+          "width": 720,
+          "height": 1280,
+          "src": "https:\/\/cdn.shopify.com\/s\/files\/1\/0651\/6591\/8451\/products\/photo_2022-06-25_15-48-19.jpg?v=1656168509",
+          "variant_ids": [],
+          "admin_graphql_api_id": "gid:\/\/shopify\/ProductImage\/37632686358771"
+        }
+      ],
+      "image": {
+        "product_id": 7718173311219,
+        "id": 37632686358771,
+        "position": 1,
+        "created_at": "2022-06-25T15:48:29+01:00",
+        "updated_at": "2022-06-25T15:48:29+01:00",
+        "alt": null,
+        "width": 720,
+        "height": 1280,
+        "src": "https:\/\/cdn.shopify.com\/s\/files\/1\/0651\/6591\/8451\/products\/photo_2022-06-25_15-48-19.jpg?v=1656168509",
+        "variant_ids": [],
+        "admin_graphql_api_id": "gid:\/\/shopify\/ProductImage\/37632686358771"
+      }
+    }
+  ]
+}

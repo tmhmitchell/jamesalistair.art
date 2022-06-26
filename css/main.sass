@@ -1,15 +1,19 @@
 ---
 ---
 
+$link-hover-color: #77c571
+
 body
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif
 
-// Masthead
+a
+    text-decoration: none
+
+    & :hover
+        color: $link-hover-color
+
 .masthead
-    // background-image: url("https://cdn.snorv.art/misc/banner-nov-2020/banner-nov-2020-compressed.jpg")
-    background-color: #999d0f
-    background-position: left -20%
-    height: 20vh
+    background-color: #702942
     width: 100%
     background-size: cover
     background-origin: padding-box
@@ -22,29 +26,24 @@ body
     .masthead-links
         p
             display: inline-block
-            vertical-align: top
-            padding-right: 1em
+            margin-right: 1em
+            margin-bottom: 2em
 
-        a
+        p :visited
             color: inherit
 
-        a:visited
-            text-decoration: none
+        p :hover
+            color: $link-hover-color
 
-        a:hover
-            text-decoration: none
+.masthead-title
+    letter-spacing: 0.25em
 
-    // Masthead title
-    .masthead-title
-        position: absolute
-        bottom: 2em
-        letter-spacing: 0.5em
-
-.container-fluid
+div[class*="container"]
     padding: 2em
 
-// .content
-    // padding: 2em
+div[class*="col-"]
+    padding-left: 1em
+    padding-right: 1em
 
 .post
     margin-bottom: 2em
@@ -54,10 +53,11 @@ body
         color: #000000
 
     &-title:hover:visited
-        color: #77c571
+        color: $link-hover-color
 
-    // Image on /post page 
-    &-image-container
-        justify-content: center
-        display: flex
-        margin-bottom: 1em
+// 17em is derived from the padding/margin/text elements in the header
+// I guessed until it looked right
+.img-magic
+    max-height: calc(100vh - 17em)
+    max-width: 100%
+    padding-bottom: 2em
