@@ -38,6 +38,8 @@ type Post struct {
 func (p Post) Render() ([]byte, error) {
 	buf := bytes.Buffer{}
 
+	// XXX Need to be fixed, tags in the description are messing up the
+	// posts/YAML
 	var builder strings.Builder
 	for _, line := range strings.Split(p.Description, "\n") {
 		builder.WriteString(line)
