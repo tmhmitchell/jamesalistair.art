@@ -1,7 +1,7 @@
 package main
 
 import (
-	"bytes"
+	"fmt"
 	"os"
 	"path"
 	"strings"
@@ -60,19 +60,27 @@ func main() {
 		}
 
 		postFilePath := path.Join(postsDirPath, postFileName)
-		postFileData := posts.PostData{
+		postFileData := posts.Post{
 			Title:       product.Title,
 			Description: product.BodyHTML,
 			Date:        product.CreatedAt,
 			ImageSrc:    product.Image.Src,
 		}
 
-		buf := bytes.Buffer{}
-		if err := posts.Template.Execute(&buf, postFileData); err != nil {
+		if len(product.Variants) == 0 {
+			panic(fmt.Sprintf("product \"%s\" has no variants", product.Title))
+		}
+
+		if product.Variants[0].InventoryQuantity != 0 {
+			postFileData.ShopifyId = product.Variants[0].ID
+		}
+
+		renderedPostFileData, err := postFileData.Render()
+		if err != nil {
 			panic(err)
 		}
 
-		if err := os.WriteFile(postFilePath, buf.Bytes(), 0644); err != nil {
+		if err := os.WriteFile(postFilePath, renderedPostFileData, 0644); err != nil {
 			panic(err)
 		}
 	}

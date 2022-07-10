@@ -119,6 +119,7 @@ func GetProducts() ([]Product, error) {
 	defer res.Body.Close()
 
 	payload := Payload{}
+
 	err = json.NewDecoder(res.Body).Decode(&payload)
 	if err != nil {
 		return nil, err
