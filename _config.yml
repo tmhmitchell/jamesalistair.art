@@ -9,6 +9,7 @@ exclude:
   - go.mod
   - go.lock
   - Rakefile
+  - _unused
 
 s3: https://cdn.snorv.art
 shopify: https://shop.jamesalistair.art
