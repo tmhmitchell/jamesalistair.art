@@ -10,6 +10,8 @@ exclude:
   - go.lock
   - Rakefile
   - _unused
+  - Dockerfile
+  - docker-compose.yml
 
 s3: https://cdn.snorv.art
 shopify: https://shop.jamesalistair.art
