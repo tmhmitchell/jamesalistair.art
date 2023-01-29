@@ -1,16 +1,19 @@
 <div class="post">
   <div class="card rounded-0">
     <a href="{{ post.url }}">
-      <img
-        class="card-img-top rounded-0"
-        src="
+      <div style="overflow: hidden;">
+        <img
+          class="card-img-top rounded-0"
+          src="
         {% if post.loQualPath contains 'https://' %}
         {{ post.loQualPath }}
         {% else %}
         {{ site.s3 }}{{ post.loQualPath }}
         {% endif %}
         "
-      >
+          style="transform: scale(1.4) {{ post.translate }};"
+        >
+      </div>
     </a>
     <div class="card-body">
       <h5 class="card-title">
